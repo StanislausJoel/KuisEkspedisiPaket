@@ -4,7 +4,7 @@ import Model.*;
 
 public class PaketController {
     
-    public double hitungBiaya(double berat, TipeBarang type) {
+    public static double hitungBiaya(double berat, TipeBarang type) {
 
         double total = berat * 15000;
 
@@ -18,7 +18,7 @@ public class PaketController {
 
     }
 
-    public double hitungBiaya(double panjang, double lebar, double tinggi, boolean asuransi, TipeBarang type) {
+    public static double hitungBiaya(double panjang, double lebar, double tinggi, boolean asuransi, TipeBarang type) {
 
         double harga = 0;
         double basePrice = 0;
@@ -53,7 +53,7 @@ public class PaketController {
 
     }
 
-    public double hitungBiaya(double panjang, double lebar, double tinggi, boolean asuransi, TipeBarang type, JenisPengiriman jenisPengiriman) {
+    public static double hitungBiaya(double panjang, double lebar, double tinggi, boolean asuransi, TipeBarang type, JenisPengiriman jenisPengiriman) {
 
         double harga = 0;
         double basePrice = 0;
@@ -85,6 +85,48 @@ public class PaketController {
         }
         
         return harga;
+
+    }
+
+    public static TipeBarang getTipe(int num) {
+
+        if (num == 1) {
+            
+            return TipeBarang.NORMAL;
+
+        }
+
+        return TipeBarang.BERHARGA;
+
+    }
+
+    public static ModeTranpostasi getMode(int num) {
+
+        if (num == 1) {
+            
+            return ModeTranpostasi.DARAT;
+
+        }
+        else if (num == 2) {
+            
+            return ModeTranpostasi.LAUT;
+
+        }
+
+        return ModeTranpostasi.UDARA;
+
+    }
+
+    public static JenisPengiriman getJenis(int num) {
+
+        if (num == 1) {
+            
+            return JenisPengiriman.EXPRESS;
+
+        }
+        
+
+        return JenisPengiriman.REGULER;
 
     }
 
