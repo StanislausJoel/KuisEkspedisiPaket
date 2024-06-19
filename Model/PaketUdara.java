@@ -8,9 +8,9 @@ public class PaketUdara extends Paket{
     private JenisPengiriman jenisPengiriman;
     private boolean asuransi;
 
-    public PaketUdara(double berat, ModeTranpostasi mode, double panjang, double lebar, double tinggi,
+    public PaketUdara(double berat, ModeTranpostasi mode, TipeBarang type, double panjang, double lebar, double tinggi,
             JenisPengiriman jenisPengiriman, boolean asuransi) {
-        super(berat, mode);
+        super(berat, mode, type);
         this.panjang = panjang;
         this.lebar = lebar;
         this.tinggi = tinggi;

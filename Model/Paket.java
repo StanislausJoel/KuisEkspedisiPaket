@@ -6,10 +6,12 @@ public abstract class Paket {
     private double harga;
     private TipeBarang type;
     private ModeTranpostasi mode;
+    private double totalHarga;
     
-    public Paket(double berat, ModeTranpostasi mode) {
+    public Paket(double berat, ModeTranpostasi mode, TipeBarang type) {
         this.berat = berat;
         this.mode = mode;
+        this.type = type;
     }
     
     public TipeBarang getType() {
@@ -42,6 +44,14 @@ public abstract class Paket {
 
     public void setMode(ModeTranpostasi mode) {
         this.mode = mode;
+    }
+
+    public double getTotalHarga() {
+        return totalHarga;
+    }
+
+    public void setTotalHarga(double totalHarga) {
+        this.totalHarga = totalHarga;
     }
 
 }

@@ -7,9 +7,9 @@ public class PaketLaut extends Paket {
     private double tinggi;
     private boolean asuransi;
 
-    public PaketLaut(double berat, ModeTranpostasi mode, double panjang, double lebar, double tinggi,
+    public PaketLaut(double berat, ModeTranpostasi mode, TipeBarang type, double panjang, double lebar, double tinggi,
             boolean asuransi) {
-        super(berat, mode);
+        super(berat, mode, type);
         this.panjang = panjang;
         this.lebar = lebar;
         this.tinggi = tinggi;
