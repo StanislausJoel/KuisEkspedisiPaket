@@ -2,6 +2,7 @@ package Main;
 
 import java.util.ArrayList;
 import Model.*;
+import View.MainMenu;
 
 public class Main {
     
@@ -9,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         
-
+        new MainMenu();
 
     }
 

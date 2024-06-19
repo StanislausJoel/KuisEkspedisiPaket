@@ -1,5 +1,7 @@
 package Controller;
 
+import java.util.ArrayList;
+
 import Model.*;
 
 public class PaketController {
@@ -127,6 +129,20 @@ public class PaketController {
         
 
         return JenisPengiriman.REGULER;
+
+    }
+
+    public static double getTotal(ArrayList<Paket> listPaket) {
+
+        double total = 0;
+
+        for (Paket paket : listPaket) {
+         
+            total += total + paket.getHarga();
+
+        }
+
+        return total;
 
     }
 

@@ -69,6 +69,8 @@ public class MainMenu {
 
                 }
 
+                new showTotalHarga();
+
             } catch (Exception e) {
                 
                 System.out.println("Input error!");
