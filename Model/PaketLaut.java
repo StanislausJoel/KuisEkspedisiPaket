@@ -5,13 +5,15 @@ public class PaketLaut extends Paket {
     private double panjang;
     private double lebar;
     private double tinggi;
-    private double volume;
-    
-    public PaketLaut(double berat, ModeTranpostasi mode, double panjang, double lebar, double tinggi) {
+    private boolean asuransi;
+
+    public PaketLaut(double berat, ModeTranpostasi mode, double panjang, double lebar, double tinggi,
+            boolean asuransi) {
         super(berat, mode);
         this.panjang = panjang;
         this.lebar = lebar;
         this.tinggi = tinggi;
+        this.asuransi = asuransi;
     }
 
     public double getPanjang() {
@@ -38,12 +40,12 @@ public class PaketLaut extends Paket {
         this.tinggi = tinggi;
     }
 
-    public double getVolume() {
-        return volume;
+    public boolean isAsuransi() {
+        return asuransi;
     }
 
-    public void setVolume(double volume) {
-        this.volume = volume;
+    public void setAsuransi(boolean asuransi) {
+        this.asuransi = asuransi;
     }
 
 }

@@ -5,16 +5,17 @@ public class PaketUdara extends Paket{
     private double panjang;
     private double lebar;
     private double tinggi;
-    private double volume;
     private JenisPengiriman jenisPengiriman;
+    private boolean asuransi;
 
     public PaketUdara(double berat, ModeTranpostasi mode, double panjang, double lebar, double tinggi,
-            JenisPengiriman jenisPengiriman) {
+            JenisPengiriman jenisPengiriman, boolean asuransi) {
         super(berat, mode);
         this.panjang = panjang;
         this.lebar = lebar;
         this.tinggi = tinggi;
         this.jenisPengiriman = jenisPengiriman;
+        this.asuransi = asuransi;
     }
 
     public double getPanjang() {
@@ -41,14 +42,6 @@ public class PaketUdara extends Paket{
         this.tinggi = tinggi;
     }
 
-    public double getVolume() {
-        return volume;
-    }
-
-    public void setVolume(double volume) {
-        this.volume = volume;
-    }
-
     public JenisPengiriman getJenisPengiriman() {
         return jenisPengiriman;
     }
@@ -57,4 +50,12 @@ public class PaketUdara extends Paket{
         this.jenisPengiriman = jenisPengiriman;
     }
 
+    public boolean isAsuransi() {
+        return asuransi;
+    }
+
+    public void setAsuransi(boolean asuransi) {
+        this.asuransi = asuransi;
+    }
+    
 }
